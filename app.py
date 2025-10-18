@@ -1,3 +1,8 @@
+"""
+EcoFit Diary - Console App
+Demonstrates sequence, selection, iteration, and functions.
+"""
+
 from datetime import datetime
 from ecofit_diary import Diary, DiaryEntry
 
@@ -36,7 +41,8 @@ def add_entry():
 
 def view_summary():
     print("\nSummary:")
-    print(diary.summary())
+    s = diary.summary()
+    print(s)
 
 def view_best_days():
     print("\nTop Days:")
@@ -78,6 +84,7 @@ def main():
         print("4. Change Goal")
         print("5. Compare Days")
         print("6. Exit")
+
         choice = input("Select option: ").strip()
         if choice == "1":
             add_entry()
